@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,212,255,1) 100%);
+}
+
+/*--    Cabeçalho   --*/
+
+
+#nav .nav-logo {
+    width: 60px;
+}
+
+#nav {
+    padding: 0.6rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0 0.1rem 0.5rem rgb(185, 185, 185);
+    width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    color: #00D4FF;
+    text-shadow: #000 -1px -1px 4px;
+}
+
+#pesquisa {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: black;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+#button {
+    color: white;
+    border: none;
+    background-color: rgba(0, 0, 0, .6);
+    padding: .8rem;
+    border-radius: 20px;
+    box-shadow: 0 0.1rem 0.5rem black;
+}
+
+#button:hover {
+    color: black;
+    background-color: #fff;
+    transition: 0.5s ease;
+    box-shadow: 0 0.1rem 0.5rem grey;
+}
+
+.menu {
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: black;
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.menu .bar:nth-child(2) {
+    background-color: rgb(165, 165, 165);
+}
+
+#main-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 10px;
+}
+
+.center-pag {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-pag > h2 {
+    max-width: 600px;
+    font-size: 3rem;
+    line-height: 3.1rem;
+    text-shadow: rgb(163, 163, 163) -1px -1px 4px;
+    text-align: center;
+}
+
+.center-pag > h2 > span {
+    color: black;
+}
+
+
+.center-pag > p {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 50rem;
+}
+
+.center-img-logo{
+    width: 400px;
+    margin-top: 3rem;
+}
+
+#footer {
+    box-shadow: 0 0.1rem 0.5rem rgb(185, 185, 185);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2.7rem;
+}
+
+#socials {
+    color: black;
+
+}
+
+@media only screen and (max-width: 550px){
+
+    #nav {
+        position: fixed;
+        top: 0;
+        background-color: rgba(165, 165, 165, .8);
+    }
+
+    h1 {
+        display: none;
+    }
+
+    .nav-button {
+        position: fixed;
+        right: -100%;
+        top: 79px;
+        width: 50%;
+        height: 100%;
+        flex-direction: column;
+        background-color: rgba(165, 165, 165, .8);
+        gap: -10px;
+        transition: 0.3s;
+    }
+
+    #pesquisa {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+
+    }
+
+    .nav-button.ativo {
+        right: 0;
+    }
+
+    #button {
+        margin-top: 16px;
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        box-shadow: 0 0.1rem 0.5rem #00D4FF;
+        width: 80%;
+    }
+
+    #button:hover {
+        background-color: #00D4FF;
+        color: #000;
+        box-shadow: 0 0.1rem 0.5rem black;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu.ativo .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu.ativo .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+ 
+    .center-pag > h2 {
+        font-size: 2rem;
+        margin-top: 2.4rem;
+    }
+
+    .main-page {
+        width: 100%;
+        height: auto;
+    }
+
+    .center-pag > p {
+        font-size: 1rem;
+    }
+
+    .home-page-logo {
+        width: 350px;
+    }
+}
